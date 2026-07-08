@@ -13,13 +13,17 @@ Every project below ships its tests, a CI workflow, and an honest facts-vs-estim
 
 An ETL + BI pipeline over public **USAspending.gov / SAM.gov** data that finds expiring DoD cyber/IT contracts,
 scores each for pursuit fit, and **quarantines the records it can't stand behind** instead of dressing them up as
-leads. Ships a DuckDB SQL pack, a Power BI star schema, and a Streamlit app.
+leads. Ships a DuckDB SQL pack, a Power BI star schema, and a Streamlit app that imports the same scoring
+library the pipeline runs — one source of truth, no mirrored scorers. The full FY2019–2026 snapshot publishes
+as a versioned GitHub Release with a one-command download.
 
-> **Outcome:** 324 tests, a data-contract validator (scorer parity to 0.0), a six-query DuckDB pack, and a
-> "Competitive Price Range" that refuses to estimate below a comparables floor. Fixing an expired-record scoring
-> bug moved the Tier-1 count from an inflated 118 to an honest **25**.
+> **Outcome:** 449 tests, a data-contract validator (scorer parity to 0.0, plus a PII gate on every published
+> artifact), a six-query DuckDB pack, and a "Competitive Price Range" that refuses to estimate below a
+> comparables floor. The FY2019–2026 intake surfaces **35,964 recompete candidates and quarantines 29,343 of
+> them** — most of the data fails its own honesty bar, and the app says so instead of hiding it. That
+> discipline started with a scoring bug that let expired contracts inflate Tier-1 **118 → 25**.
 
-[![GovCon Recompete Radar — the Monday briefing](https://raw.githubusercontent.com/CJud25/GovConRadar/main/docs/screenshots/home_demo.png)](https://cjudk25.streamlit.app)
+[![GovCon Recompete Radar — the Monday briefing](https://raw.githubusercontent.com/CJud25/GovConRadar/main/docs/screenshots/home_demo.png?v=2026-07-08)](https://cjudk25.streamlit.app)
 
 **[Live demo](https://cjudk25.streamlit.app)** · **[Repo](https://github.com/CJud25/GovConRadar)** · **[Case study](https://github.com/CJud25/GovConRadar/blob/main/docs/case-study.md)**
 
