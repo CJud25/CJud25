@@ -1,8 +1,17 @@
 ## Hi there 👋
 
-**I build automation solutions that stick. My approach is straightforward: understand the bottleneck, design a solution that fits the workflow, ship it, and make sure it actually works in production. I work the full path—from initial discovery through deployment and handoff—because half-baked automation creates more problems than it solves. Whether it’s compliance workflows, HR systems, data pipelines, or operational dashboards, I focus on creating tools that reduce friction and let teams do what they actually want to do.
+**I build automation solutions that stick.** My approach is straightforward: understand the bottleneck, 
+design a solution that fits the workflow, ship it, and make sure it actually works in production. I work 
+the full path—from initial discovery through deployment and handoff—because half-baked automation creates 
+more problems than it solves. Whether it’s compliance workflows, HR systems, data pipelines, or operational 
+dashboards, I focus on creating tools that reduce friction and let teams do what they actually want to do.
 
-My toolkit spans Power Platform (Automate, Apps, BI), Python, Streamlit, and modern data tools—skills I’ve built independently while working as an Eligibility and Compliance Coordinator managing Oracle HR systems and complex regulatory workflows. I hold an Azure AI Engineer Associate certification and multiple other Anthropic certifications and Microsoft credentials. I’ve shipped solutions ranging from disability eligibility automation and grant-writing dashboards to service-desk optimization engines and compliance documentation systems. I also maintain a freelance practice on Upwork focused on Power Platform development..**
+My toolkit spans Power Platform (Automate, Apps, BI), Python, Streamlit, and modern data tools—skills 
+I’ve built independently while working in Compliance, navigating Oracle HR systems and complex regulatory 
+workflows. I hold an Azure AI Engineer Associate certification and multiple other Anthropic certifications 
+and Microsoft credentials. I’ve created and shipped off solutions ranging from disability eligibility 
+automation and grant-writing dashboards to service-desk optimization engines and compliance documentation 
+systems. I also maintain a freelance practice on Upwork focused on Power Platform development.
 
 
 ---
