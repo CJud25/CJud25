@@ -1,8 +1,4 @@
 <p align="center">
-  <img src="assets/banner.jpg" alt="Chris Judkins — Automation · Analysis · Data Solutions — From complex to clarity" width="100%">
-</p>
-
-<p align="center">
   <a href="https://www.linkedin.com/in/cjud/"><b>LinkedIn</b></a> ·
   <a href="https://isosterra.com"><b>Isos Terra</b></a> ·
   <a href="https://capture-plan.vercel.app"><b>Recompass</b></a> ·
