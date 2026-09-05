@@ -18,21 +18,21 @@ design and run full products: multi-tenant SaaS, a pricing engine, a mobile game
 is that every one of them is explicit about what it will not compute, because a number you cannot
 defend is worse than no number.
 
-**Now:** Portfolio & Tooling AI Analyst with BRMi, contracted to Navy Federal Credit Union's main
-campus. Prior roles and accomplishments are on [LinkedIn](https://www.linkedin.com/in/cjud/).
+**Now:** Portfolio & Tooling AI Analyst with BRMi. Prior roles and accomplishments are on [LinkedIn](https://www.linkedin.com/in/cjud/).
 
 **Freelance and consulting:** Power Platform and automation work through
 [Upwork](https://www.upwork.com/freelancers/~019c7b0c492bb00fb9), and AI-automation consulting through
 [DigitalTreehouse](https://digitaltreehouse.com). For either, email
 [chris@digitaltreehouse.com](mailto:chris@digitaltreehouse.com).
+I also offer consulting on implementing AI in daily work and life. 
 
 ---
 
 ## Building now
 
-Four products, three of them in one arc. TENS HQ (below) finds public contract data. Recompass turns
+Three products, two of them in one arc. Recompass finds public contract data, and turns
 that into a capture tool for the nonprofits that compete for those contracts. Isos Terra serves the same
-nonprofits' workforce plans. The Branch takes the career-decision idea down to the individual. Public
+nonprofits' workforce plans and compliance needs. The Branch takes the career-decision choices to the macro. Public
 data, then the organization, then the person.
 
 ### Isos Terra · [isosterra.com](https://isosterra.com)
@@ -41,15 +41,14 @@ data, then the organization, then the person.
 
 A workspace for the accommodation and career plans a nonprofit agency under an AbilityOne-style
 contract already keeps: the supports a person uses on the floor, the site's own record of what
-changed, the monthly check-in, and the growth plan underneath. Three chairs (HQ, VP, site
-supervisor) see the same records at the altitude their job needs, and every number on the
+changed, the monthly check-in, and the growth plan underneath. Three chairs (HQ, Management, Supervisor) 
+see the same records at the altitude their job needs, and every number on the
 dashboard opens the screen that proves it.
 
-**Status:** deployed with hosted identity (Clerk), Postgres persistence (Prisma on Supabase) and a
+**Status:** deployed with hosted identity, Postgres persistence and a
 proven tenant boundary. Two persistence engines with a parity suite showing they agree. Every record
-on it is fictional by design; real personal or health data needs a further governance decision before
-it is allowed in. AI is confined to an explicit request for a wording suggestion that a human must
-edit and save. No model scores a person, decides eligibility, or changes a plan.
+on it is fictional by design for now. AI is confined to an explicit request for a wording suggestion that a human must
+review and confirm. No model scores a person, decides eligibility, or changes a plan.
 
 <details>
 <summary>One more screen: the career-plan pipeline, with the human-decisions banner it opens on</summary>
@@ -66,10 +65,10 @@ edit and save. No model scores a person, decides eligibility, or changes a plan.
 ### Recompass · [capture-plan.vercel.app](https://capture-plan.vercel.app)
 
 Federal contract capture for AbilityOne nonprofit teams as one workflow: **Find → Explore → Price →
-Team → Propose**. The engines behind it are the TENS HQ modules, ported into a single multi-tenant
-Next.js application with typed contracts between stages.
+Team → Propose**. The engines behind it are the previous TENS HQ modules I created as portfolio pieces, 
+I ported them into a single multi-tenant Next.js application with typed contracts between stages.
 
-**Status:** pre-pilot. Find through Team are built and tested (2,300+ tests); Propose is a stub, not a
+**Status:** pre-pilot currently. The sections Find through Team are built and tested (2,300+ tests); Propose is a stub, not a
 proposal writer. Subscription billing rails exist in code but no live transaction has occurred. The
 data-source gate stays closed until the procurement-list feed is proven, so nothing publishes to
 production data yet. Private repository.
@@ -83,8 +82,8 @@ production data yet. Private repository.
 ### The Branch
 
 *Don't compare choices. Compare the lives they create.* A career decision platform for young adults
-choosing a first serious career and working adults changing one. It projects the whole life a path
-creates over five years (earnings, debt, commute, schedule, family load, reversibility) and shows the
+choosing a first serious career and working adults in the process of changing one. It projects the whole life a path
+creates over ten years (earnings, debt, commute, schedule, family load, reversibility) and shows the
 exact salary where the ordering flips, with the formula version and every assumption visible. It never
 declares a best career or predicts success.
 
@@ -116,11 +115,11 @@ Not yet submitted.
 ### Also in the lab
 
 - **Complement Engine (working name "Tell").** A personality assessment that scores *how* you
-  answer, not what you claim. It puts you in
-  a situation, reads the tells in your free-text reply (first verb, whether you moved toward a person
-  or the facts, hesitation, rewrites), then names the gap between your self-report and your behavior.
-  Currently a private working build with a blind two-model report evaluation on real respondents. It
-  is not a validated psychometric instrument and is never described as one.
+  answer, not what you claim. It puts you in situations, reads the tells in your free-text reply 
+  (first verb, whether you moved toward a person or the facts, hesitation, rewrites), then names 
+  the gap between your self-report and your behavior. Currently a private working build with a blind 
+  two-model report evaluation on real respondents. It is not a validated psychometric instrument and 
+  is never described as one.
 
 ---
 
@@ -167,12 +166,13 @@ or confers a status.
 
 ---
 
-## Toolkit and credentials
+## Toolkit and credentials for these works
 
-Power Platform (Automate, Apps, BI) · Python · TypeScript / Next.js · Streamlit · Flutter · Postgres
+Power Platform (Automate, Apps, BI, Sharepoint) · Python · TypeScript / Next.js · Streamlit · Flutter · Postgres
 (Prisma, Supabase, RLS) · Clerk · Stripe · Google Apps Script · Playwright / Vitest
 
 Microsoft Certified Azure AI Engineer Associate, plus additional Microsoft and Anthropic credentials.
 Full list on [LinkedIn](https://www.linkedin.com/in/cjud/).
+
 
 <!-- TODO(Chris): list the specific certs here if you want them visible without a click. -->
