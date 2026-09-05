@@ -18,7 +18,7 @@ design and run full products: multi-tenant SaaS, a pricing engine, a mobile game
 is that every one of them is explicit about what it will not compute, because a number you cannot
 defend is worse than no number.
 
-**Now:** Portfolio & Tooling AI Analyst with BRMi. Prior roles and accomplishments are on [LinkedIn](https://www.linkedin.com/in/cjud/).
+**Now:** Portfolio Tooling & AI Enablement Analyst with BRMi. Prior roles and accomplishments are on [LinkedIn](https://www.linkedin.com/in/cjud/).
 
 **Freelance and consulting:** Power Platform and automation work through
 [Upwork](https://www.upwork.com/freelancers/~019c7b0c492bb00fb9), and AI-automation consulting through
