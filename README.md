@@ -33,16 +33,15 @@ that into a capture tool for the nonprofits that compete for those contracts. Is
 nonprofits' workforce plans. The Branch takes the career-decision idea down to the individual. Public
 data, then the organization, then the person.
 
-<table>
-<tr>
-<td width="140" align="center"><img src="assets/isos-terra-logo.png" width="120" alt="Isos Terra"></td>
-<td>
-
 ### Isos Terra · [isosterra.com](https://isosterra.com)
+
+[![Isos Terra dashboard: the five numbers HQ opens on, every card opening the screen that proves it](assets/isos-terra-dashboard.png)](https://isosterra.com)
 
 A workspace for the accommodation and career plans a nonprofit agency under an AbilityOne-style
 contract already keeps: the supports a person uses on the floor, the site's own record of what
-changed, the monthly check-in, and the growth plan underneath.
+changed, the monthly check-in, and the growth plan underneath. Three chairs (HQ, VP, site
+supervisor) see the same records at the altitude their job needs, and every number on the
+dashboard opens the screen that proves it.
 
 **Status:** deployed with hosted identity (Clerk), Postgres persistence (Prisma on Supabase) and a
 proven tenant boundary. Two persistence engines with a parity suite showing they agree. Every record
@@ -50,8 +49,14 @@ on it is fictional by design; real personal or health data needs a further gover
 it is allowed in. AI is confined to an explicit request for a wording suggestion that a human must
 edit and save. No model scores a person, decides eligibility, or changes a plan.
 
-</td>
-</tr>
+<details>
+<summary>One more screen: the career-plan pipeline, with the human-decisions banner it opens on</summary>
+
+![Isos Terra PCEP: three paths, one program, and a banner saying nothing on these screens files, approves, or moves anybody](assets/isos-terra-pcep.png)
+
+</details>
+
+<table>
 <tr>
 <td align="center"><img src="assets/recompass-logo.png" width="130" alt="Recompass"></td>
 <td>
