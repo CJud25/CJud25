@@ -7,11 +7,10 @@
   <a href="https://isosterra.com"><b>Isos Terra</b></a> ·
   <a href="https://capture-plan.vercel.app"><b>Recompass</b></a> ·
   <a href="https://github.com/CJud25/TENS-HQ"><b>TENS HQ</b></a> ·
-  <a href="https://www.upwork.com/freelancers/cjud"><b>Upwork</b></a> ·
+  <a href="https://www.upwork.com/freelancers/~019c7b0c492bb00fb9"><b>Upwork</b></a> ·
   <a href="mailto:chris@digitaltreehouse.com"><b>chris@digitaltreehouse.com</b></a>
 </p>
 
-<!-- TODO(Chris): confirm the Upwork profile URL above; the slug is a guess. -->
 
 I turn messy operational problems into software that ships and stays shipped. I started in
 Compliance, learned to build by automating my own bottlenecks in Power Platform and Python, and now
@@ -23,7 +22,7 @@ defend is worse than no number.
 campus. Prior roles and accomplishments are on [LinkedIn](https://www.linkedin.com/in/cjud/).
 
 **Freelance and consulting:** Power Platform and automation work through
-[Upwork](https://www.upwork.com/freelancers/cjud), and AI-automation consulting through
+[Upwork](https://www.upwork.com/freelancers/~019c7b0c492bb00fb9), and AI-automation consulting through
 [DigitalTreehouse](https://digitaltreehouse.com). For either, email
 [chris@digitaltreehouse.com](mailto:chris@digitaltreehouse.com).
 
