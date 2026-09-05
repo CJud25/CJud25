@@ -1,101 +1,178 @@
-## Hi there 👋
+<p align="center">
+  <img src="assets/banner.jpg" alt="Chris Judkins — Automation · Analysis · Data Solutions — From complex to clarity" width="100%">
+</p>
 
-**I build automation solutions that stick.** My approach is straightforward: understand the bottleneck, 
-design a solution that fits the workflow, ship it, and make sure it actually works in production. I work 
-the full path—from initial discovery through deployment and handoff—because half-baked automation creates 
-more problems than it solves. Whether it’s compliance workflows, HR systems, data pipelines, or operational 
-dashboards, I focus on creating tools that reduce friction and let teams do what they actually want to do.
-
-My toolkit spans Power Platform (Automate, Apps, BI), Python, Streamlit, and modern data tools—skills 
-I’ve built independently while working in Compliance, navigating Oracle HR systems and complex regulatory 
-workflows. I hold an Azure AI Engineer Associate certification and multiple other Anthropic certifications 
-and Microsoft credentials. I’ve created and shipped off solutions ranging from disability eligibility 
-automation and grant-writing dashboards to service-desk optimization engines and compliance documentation 
-systems. I also maintain a freelance practice on Upwork focused on Power Platform development.
+<p align="center">
+  <a href="https://www.linkedin.com/in/cjud/"><b>LinkedIn</b></a> ·
+  <a href="https://isosterra.com"><b>Isos Terra</b></a> ·
+  <a href="https://capture-plan.vercel.app"><b>Recompass</b></a> ·
+  <a href="https://github.com/CJud25/TENS-HQ"><b>TENS HQ</b></a> ·
+  <a href="https://www.upwork.com/freelancers/~019c7b0c492bb00fb9"><b>Upwork</b></a> ·
+  <a href="mailto:chris@digitaltreehouse.com"><b>chris@digitaltreehouse.com</b></a>
+</p>
 
 
----
+I turn messy operational problems into software that ships and stays shipped. I started in
+Compliance, learned to build by automating my own bottlenecks in Power Platform and Python, and now
+design and run full products: multi-tenant SaaS, a pricing engine, a mobile game. The common thread
+is that every one of them is explicit about what it will not compute, because a number you cannot
+defend is worse than no number.
 
-# 🧭 TENS HQ
+**Now:** Portfolio & Tooling AI Analyst with BRMi, contracted to Navy Federal Credit Union's main
+campus. Prior roles and accomplishments are on [LinkedIn](https://www.linkedin.com/in/cjud/).
 
-Federal contract capture is one long workflow with six distinct jobs in it. You find the expiring contract,
-you investigate who holds it, you price the work, you prove you're compliant, you staff it, and — if you're
-honest — you go back later and check whether your call was any good.
-
-Most tools pick one of those and pretend the others don't exist. **TENS HQ is that whole lifecycle**, built
-as six separate applications that hand each other typed JSON rather than one application with six tabs.
-
-That was a deliberate architectural call, not an accident of how it grew. A single app would mean one trust
-boundary around six very different kinds of data — public award records, an organization's internal indirect
-rates, and applicant information that must never be scored. Keeping them apart keeps the blast radius small
-and lets each one state its own governance rules honestly. The seams are the point:
-[`contracts/`](https://github.com/CJud25/TENS-HQ/tree/main/contracts) holds the two versioned handoffs
-(`radar-handoff/v1`, `packet-fmp/v1`) that let the stages talk without sharing a database.
-
-| Stage | Module | What it does | |
-|---|---|---|---|
-| **Find** | GovCon Recompete Radar | Surfaces expiring DoD cyber/IT contracts from USAspending and SAM.gov with defensible forward signals — and quarantines the records it can't stand behind | [app](https://govconradar.streamlit.app) · [repo](https://github.com/CJud25/GovConRadar) |
-| **Investigate** | ReconRadar | Builds a cited, provenance-tracked evidence packet per opportunity. Score-free by design — a human decides | [app](https://reconradar.streamlit.app) · [repo](https://github.com/CJud25/ReconRadar) |
-| **Price** | FMP Calculator | A low/med/high fair-market-price band mirroring Commission Policy 51.601 line by line, every rate cited | [app](https://fmp-calculator.streamlit.app) · [repo](https://github.com/CJud25/FMP-Calculator) |
-| **Comply** | CMMC Vault | Scores CMMC Level 2 readiness against NIST SP 800-171 — because a high control count is not the same as ready | [app](https://cmmcvault-demo.streamlit.app) · [repo](https://github.com/CJud25/CMMCVault) |
-| **Staff** | ROCC | Aggregates recruiting and outreach signal by source and contract, on synthetic data. Scores sources and contracts, never people | [app](https://controlcenter.streamlit.app) · [repo](https://github.com/CJud25/ROCC) |
-| **Learn** | EDGE | Logs every pursue/pass call and the analyst's decision-time confidence so judgment can be calibrated later | *no app — by design* |
-
-**EDGE has no application and that's the interesting part.** Calibration needs a corpus of real decisions
-with known outcomes. I don't have one yet, so the logging kit is built and the calibration read is
-specified and deliberately unbuilt. Shipping a reliability curve over four decisions would look like
-analytics and function as noise.
-
-[![GovCon Recompete Radar — the Monday briefing](https://raw.githubusercontent.com/CJud25/GovConRadar/main/docs/screenshots/home_demo.png?v=2026-07-26)](https://govconradar.streamlit.app)
-
-## The through-line: what each one won't do
-
-The interesting decisions in this stack were all subtractions.
-
-- **I built a pursuit score — feasibility × confidence × urgency — and then deleted it.** The inputs were
-  screened candidates, not confirmed facts, and a score laundered a guess into something that looked
-  retrieved. I also rejected the compromise of merely hiding it, because the values would still have
-  flowed through hover text and prefill payloads.
-- **I never published a recall figure for the link engine.** Only about **4%** of candidates match a live
-  solicitation, so the set I miss is structurally unobservable and any recall number would be fiction.
-  When a recency filter cut established links from **4,163 to 1,311**, I shipped the smaller number.
-- **The price calculator refuses to price.** If the indirect rates were never entered, there's no headline,
-  no metric, no export. An unset rate and a deliberate zero are different things — treating a blank field
-  as 0% understated a real buildup by millions, so now blank means *stop*, not *zero*.
-- **The compliance tool can't claim to confer status.** A machine-enforced language contract in CI blocks
-  the vocabulary. Its sample org scores **89 and is still not conditionally ready**, because four open
-  requirements can't be deferred to a POA&M — 88 is necessary, not sufficient.
-
-[![CMMC Vault — sample org at 89, "Not conditionally ready"](https://raw.githubusercontent.com/CJud25/CMMCVault/main/docs/img/live-demo-sample-89.png)](https://cmmcvault-demo.streamlit.app/)
-
-**[Start at the front door →](https://github.com/CJud25/TENS-HQ)**
+**Freelance and consulting:** Power Platform and automation work through
+[Upwork](https://www.upwork.com/freelancers/~019c7b0c492bb00fb9), and AI-automation consulting through
+[DigitalTreehouse](https://digitaltreehouse.com). For either, email
+[chris@digitaltreehouse.com](mailto:chris@digitaltreehouse.com).
 
 ---
 
-## 🐾 Rescue Ops Workbook
-*The one other people actually use.*
+## Building now
 
-Everything above is evidence machinery I designed for whoever evaluates it. This one runs for whoever has
-to open it on a Tuesday: a five-module Google Apps Script package handling intake and volunteer
-coordination for a small dog-rescue nonprofit, installed on their live workbook and used by their
-coordinators. The Contact Log doubles as new-applicant intake, so the record and the follow-up stay in one
-place instead of two.
+Four products, three of them in one arc. TENS HQ (below) finds public contract data. Recompass turns
+that into a capture tool for the nonprofits that compete for those contracts. Isos Terra serves the same
+nonprofits' workforce plans. The Branch takes the career-decision idea down to the individual. Public
+data, then the organization, then the person.
 
-Two bugs surfaced only once real people used it — a timezone mismatch on the sheet and a phantom-row
-append — and both were found *after* install. No fixture would have caught either. That's the honest gap
-between building something defensible and building something used, and it's the most useful thing in my
-portfolio to think about.
+### Isos Terra · [isosterra.com](https://isosterra.com)
 
-*Not public — it runs on a real organization's data.*
+[![Isos Terra dashboard: the five numbers HQ opens on, every card opening the screen that proves it](assets/isos-terra-dashboard.png)](https://isosterra.com)
+
+A workspace for the accommodation and career plans a nonprofit agency under an AbilityOne-style
+contract already keeps: the supports a person uses on the floor, the site's own record of what
+changed, the monthly check-in, and the growth plan underneath. Three chairs (HQ, VP, site
+supervisor) see the same records at the altitude their job needs, and every number on the
+dashboard opens the screen that proves it.
+
+**Status:** deployed with hosted identity (Clerk), Postgres persistence (Prisma on Supabase) and a
+proven tenant boundary. Two persistence engines with a parity suite showing they agree. Every record
+on it is fictional by design; real personal or health data needs a further governance decision before
+it is allowed in. AI is confined to an explicit request for a wording suggestion that a human must
+edit and save. No model scores a person, decides eligibility, or changes a plan.
+
+<details>
+<summary>One more screen: the career-plan pipeline, with the human-decisions banner it opens on</summary>
+
+![Isos Terra PCEP: three paths, one program, and a banner saying nothing on these screens files, approves, or moves anybody](assets/isos-terra-pcep.png)
+
+</details>
+
+<table>
+<tr>
+<td align="center"><img src="assets/recompass-logo.png" width="130" alt="Recompass"></td>
+<td>
+
+### Recompass · [capture-plan.vercel.app](https://capture-plan.vercel.app)
+
+Federal contract capture for AbilityOne nonprofit teams as one workflow: **Find → Explore → Price →
+Team → Propose**. The engines behind it are the TENS HQ modules, ported into a single multi-tenant
+Next.js application with typed contracts between stages.
+
+**Status:** pre-pilot. Find through Team are built and tested (2,300+ tests); Propose is a stub, not a
+proposal writer. Subscription billing rails exist in code but no live transaction has occurred. The
+data-source gate stays closed until the procurement-list feed is proven, so nothing publishes to
+production data yet. Private repository.
+
+</td>
+</tr>
+<tr>
+<td align="center">🌿</td>
+<td>
+
+### The Branch
+
+*Don't compare choices. Compare the lives they create.* A career decision platform for young adults
+choosing a first serious career and working adults changing one. It projects the whole life a path
+creates over five years (earnings, debt, commute, schedule, family load, reversibility) and shows the
+exact salary where the ordering flips, with the formula version and every assumption visible. It never
+declares a best career or predicts success.
+
+**Status:** in commercial build-out. Identity, participant-owned Postgres with row-level security,
+Stripe checkout and fail-closed entitlements are written but unconfigured; there has been no production
+release. The public demo routes run entirely on synthetic fixtures. Private repository.
+
+</td>
+</tr>
+<tr>
+<td align="center"><img src="assets/scandalot-feature.jpg" width="130" alt="Scandalot"></td>
+<td>
+
+### Scandalot
+
+*Run for office. Survive the scandals. Claw your way from council to president.* A political satire
+roguelite in Flutter for iOS and Android: campaign management, governing choices, debates, donors,
+and the scandal that ends careers. Original five-motif score, authored debate trees, save migration
+across office terms.
+
+**Status:** release candidate. Store listings and privacy package are drafted and internally
+consistent; the remaining gates are Apple infrastructure, device testing and rights evidence, not code.
+Not yet submitted.
+
+</td>
+</tr>
+</table>
+
+### Also in the lab
+
+- **Complement Engine (working name "Tell").** A personality assessment that scores *how* you
+  answer, not what you claim. It puts you in
+  a situation, reads the tells in your free-text reply (first verb, whether you moved toward a person
+  or the facts, hesitation, rewrites), then names the gap between your self-report and your behavior.
+  Currently a private working build with a blind two-model report evaluation on real respondents. It
+  is not a validated psychometric instrument and is never described as one.
 
 ---
 
-Also public: **[OpsPilot Command Center](https://github.com/CJud25/OpsCommandCenter)** — one framework
-that ranks what to automate, proven across two unrelated operations on a single 0–100 scale.
+## Foundations
+
+**[TENS HQ](https://github.com/CJud25/TENS-HQ)** is where the capture work started: six public
+Streamlit applications that hand each other typed JSON rather than one app with six tabs. Find
+expiring contracts ([GovCon Recompete Radar](https://govconradar.streamlit.app)), investigate the
+incumbent ([ReconRadar](https://reconradar.streamlit.app)), price the work
+([FMP Calculator](https://fmp-calculator.streamlit.app)), prove compliance
+([CMMC Vault](https://cmmcvault-demo.streamlit.app)), staff it
+([ROCC](https://controlcenter.streamlit.app)), and log the pursue/pass call so judgment can be
+calibrated later (EDGE, deliberately unbuilt until there is a corpus to calibrate on).
+
+The interesting decisions in that stack were all subtractions. I built a pursuit score and deleted it
+because it laundered screened guesses into something that looked retrieved. I never published a recall
+figure for the link engine because the miss set is structurally unobservable. The price calculator
+refuses to price when an indirect rate is blank, because blank and zero are different things and
+treating them the same understated a real buildup by millions. The compliance tool's sample org scores
+89 and is still "not conditionally ready," because 88 is necessary, not sufficient.
+
+**Rescue Ops Workbook** is the one other people use every day: a five-module Google Apps Script package
+running intake and volunteer coordination on a dog-rescue nonprofit's live workbook. Two bugs surfaced
+only after real coordinators used it, a timezone mismatch and a phantom-row append, and no fixture would
+have caught either. That gap between defensible and used is the most useful thing in my portfolio to
+think about. Not public; it runs on a real organization's data.
+
+**[OpsPilot Command Center](https://github.com/CJud25/OpsCommandCenter)** is one framework that ranks
+what to automate, proven across two unrelated operations on a single 0–100 scale.
 
 ---
 
-*On authorship: I specify, decompose and verify; a model writes most of the line-level code. What's mine is
-the specification, the slice boundaries, the decision to run an adversarial review pass at all, and the
-calls about what to refuse to compute or delete. Each repo carries a `## How this was built` section that
-credits those review passes with the finds rather than me.*
+## How I work with AI
+
+I specify, decompose and verify; a model writes most of the line-level code. What is mine is the
+specification, the slice boundaries, the gate structure that decides what is allowed to ship, the
+adversarial review pass, and the calls about what to refuse to compute or delete. Every project above
+carries a dated ledger separating what was executed and measured from what is merely claimed, and
+each repo credits the review passes with the finds rather than me.
+
+The same rule applies to AI inside the products. Where a model appears at all it is opt-in,
+confined to a suggestion a human edits, and never in the path that scores a person, sets a price,
+or confers a status.
+
+---
+
+## Toolkit and credentials
+
+Power Platform (Automate, Apps, BI) · Python · TypeScript / Next.js · Streamlit · Flutter · Postgres
+(Prisma, Supabase, RLS) · Clerk · Stripe · Google Apps Script · Playwright / Vitest
+
+Microsoft Certified Azure AI Engineer Associate, plus additional Microsoft and Anthropic credentials.
+Full list on [LinkedIn](https://www.linkedin.com/in/cjud/).
+
+<!-- TODO(Chris): list the specific certs here if you want them visible without a click. -->
