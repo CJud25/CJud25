@@ -8,7 +8,7 @@
   <a href="https://capture-plan.vercel.app"><b>Recompass</b></a> ·
   <a href="https://github.com/CJud25/TENS-HQ"><b>TENS HQ</b></a> ·
   <a href="https://www.upwork.com/freelancers/cjud"><b>Upwork</b></a> ·
-  <a href="https://digitaltreehouse.com"><b>Consulting via DigitalTreehouse</b></a>
+  <a href="mailto:chris@digitaltreehouse.com"><b>chris@digitaltreehouse.com</b></a>
 </p>
 
 <!-- TODO(Chris): confirm the Upwork profile URL above; the slug is a guess. -->
@@ -19,10 +19,13 @@ design and run full products: multi-tenant SaaS, a pricing engine, a mobile game
 is that every one of them is explicit about what it will not compute, because a number you cannot
 defend is worse than no number.
 
-**Now:** <!-- TODO(Chris): one line on the new role, e.g. "Title at Company, doing X." -->
-see [LinkedIn](https://www.linkedin.com/in/cjud/) for the current role, prior work and accomplishments.
-Outside of it I take on Power Platform and automation work through [Upwork](https://www.upwork.com/freelancers/cjud)
-and AI-automation consulting engagements through [DigitalTreehouse](https://digitaltreehouse.com).
+**Now:** Portfolio & Tooling AI Analyst with BRMi, contracted to Navy Federal Credit Union's main
+campus. Prior roles and accomplishments are on [LinkedIn](https://www.linkedin.com/in/cjud/).
+
+**Freelance and consulting:** Power Platform and automation work through
+[Upwork](https://www.upwork.com/freelancers/cjud), and AI-automation consulting through
+[DigitalTreehouse](https://digitaltreehouse.com). For either, email
+[chris@digitaltreehouse.com](mailto:chris@digitaltreehouse.com).
 
 ---
 
