@@ -116,12 +116,12 @@ Not yet submitted.
 
 ### Also in the lab
 
-- **Tell.** A personality assessment that scores *how* you answer, not what you claim. It puts you in
+- **Complement Engine (working name "Tell").** A personality assessment that scores *how* you
+  answer, not what you claim. It puts you in
   a situation, reads the tells in your free-text reply (first verb, whether you moved toward a person
   or the facts, hesitation, rewrites), then names the gap between your self-report and your behavior.
   Currently a private working build with a blind two-model report evaluation on real respondents. It
   is not a validated psychometric instrument and is never described as one.
-<!-- TODO(Chris): Complement Engine — one or two lines and a link if it has one. -->
 
 ---
 
